@@ -1,0 +1,157 @@
+@charset "UTF-8";
+/*!
+* Start Bootstrap - Personal v1.0.1 (https://startbootstrap.com/template-overviews/personal)
+* Copyright 2013-2023 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-personal/blob/master/LICENSE)
+*/
+/*!
+ * Bootstrap  v5.2.3 (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Copyright 2011-2022 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+:root{
+    --bs-skin: #e3c39d;
+    --bs-db: #071739;
+    --bs--dg: #4b6382;
+    --bs-lightgreatblur: #a4b4c4;
+    --bs-skin-rgb: 227, 195, 157;
+    --bs-db-rgb: 71, 95,125;
+    --bs-industrialgray-rgb: 180, 182,184; 
+}
+/*bg*/
+.wall-image{
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  }
+.wall-color{
+    background-color:  #4b6382;
+}
+
+.bg-db {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-db-rgb), var(--bs-bg-opacity)) !important;
+}
+.bg-industrialgray {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-industrialgray-rgb), var(--bs-bg-opacity)) !important;
+}
+
+
+/*btn*/
+.btn-luxury {
+  --bs-btn-color: #212529;
+  --bs-btn-border-color: #212529;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #212529;
+  --bs-btn-hover-border-color: #212529;
+  --bs-btn-focus-shadow-rgb: 33, 37, 41;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #212529;
+  --bs-btn-active-border-color: #212529;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #212529;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #212529;
+  --bs-gradient: none;
+}
+
+/*color*/
+.bluegray{
+  color: #778899!important;
+}
+.black{
+  color: #000000;
+}
+.darkblue{
+  color: #071739;
+}
+.dirtygray{
+  color: #4b6382;
+}
+.lightgrayblue{
+  color: #a4b4c4;
+}
+.ivorywhite{
+  color: #cdd5db;
+}
+.industrialgray{
+  color: #b4b6b8;
+}
+.coffe{
+  color: #a68868;
+}
+.skin{
+  color: #e3c39d;
+}
+.darkblack{
+  color: #171725;
+}
+.oceanblue{
+  color: #073a69!important;
+}
+.skyblue{
+  color: #5a94c1;
+}
+.greenblue{
+  color: #77a6c0;
+}
+
+
+/*font*/
+.generalfont-<uniquifier> {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal!important;
+}
+.kongxinfont{
+  font-family: "Rampart One", sans-serif;
+  font-weight: 400;
+  font-style: normal!important;
+}
+.songtifont {
+  font-family: "Noto Serif TC", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+.sailing-C {
+  font-family: "Grey Qo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.paperfont {
+  font-family: "Foldit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal!important;
+}
+.disney-C {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal!important;
+}
+.boldfont {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.songfont {
+  font-family: "Hina Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/*format*/
+
+
+
+.text1 {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-skin-rgb), var(--bs-text-opacity));
+  
+}
+
+
+
