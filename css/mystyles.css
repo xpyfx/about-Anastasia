@@ -295,6 +295,21 @@
    position: relative;
 }
 
+.paperbox{
+    position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 133%;
+  }
+
+  .paperbox iframe{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+
 .videobox iframe {
    width: 100%;
    height: 100%;
