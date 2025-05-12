@@ -279,6 +279,15 @@
   
 }
 
+.tex-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+
 /*zoom in poster*/
 /* Modal 基本樣式 */
 .modal {
