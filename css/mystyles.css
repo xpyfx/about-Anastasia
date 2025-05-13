@@ -91,11 +91,21 @@
   }
   
 /*font*/
+.moviefont {
+  font-family: "Reggae One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-mincho {
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
   .font-serif{
     font-family:"Noto Serif TC", serif;
     font-weight:300;
-  }F
+  }
   .font-dm-serif-display{
     font-family: "DM Serif Display", serif;
     font-weight: 400;
