@@ -12,7 +12,7 @@
  */
 
 
- /*original rwsume*/
+ /*original resume*/
  
   .pink{
     color: #F5A8BC!important;
@@ -90,6 +90,8 @@
     background: #F5A8A8!important;
   }
   
+/*font*/
+
   .font-serif{
     font-family:"Noto Serif TC", serif;
     font-weight:300;
@@ -140,6 +142,24 @@
   font-weight: 400;
   font-style: normal;
 }
+.font-slime {
+  font-family: "ZCOOL QingKe HuangYou", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-fuzzy {
+  font-family: "Rubik Puddles", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-song {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
   .accordion-button:not(.collapsed) {
       color: #f5a8bc;
@@ -220,6 +240,82 @@
   height: 300px;
 }
 /*-------分隔線-------*/
+
+/*個人網頁作品*/
+.featured-projects {
+    padding: 40px 20px;
+    text-align: center;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.project-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #4A567D;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.project-card img {
+            width: 100%;
+            border-radius: 5px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .project-card h3 {
+            color: #4A567D;
+            font-size: 1.5em;
+            margin: 15px 0;
+        }
+        .project-card p {
+            color: #666;
+            margin: 10px 0;
+            opacity: 1; /* 初始隱藏文字，要隱藏文字的話：值更改為1。 */
+            transition: opacity 0.3s ease;
+        }
+        .project-card:hover p {
+            opacity: 1; /* 滑鼠懸停時顯示文字 */
+        }
+        .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #4A567D;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            opacity: 1; /* 按鈕始終可見 */
+        }
+        .project-card a:hover {
+            background: #5B6A9A;
+        }
+.first-bg{
+  background-image: url("./assets/first web.png");
+}
 
 :root{
     --bs-skin: #e3c39d;
