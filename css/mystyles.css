@@ -57,6 +57,36 @@
 
         /*--------------------*/
 
+
+        .profile {
+    position: relative;
+}
+
+.hashtags {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: transparent; /* 可選：添加半透明背景以提高可讀性 */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.hashtags span {
+    margin-right: 10px;
+}
+
+/*---------------*/
+
+.border1000{
+  border-radius: 1000px;
+}
+
+  .hashtagblack{
+    color: #0d0e15;
+  }
   .pink{
     color: #F5A8BC!important;
   }
@@ -585,6 +615,14 @@
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal!important;
+}
+
+
+.notosansfont {
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <100>;
+  font-style: normal;
 }
 .kongxinfont{
   font-family: "Rampart One", sans-serif;
