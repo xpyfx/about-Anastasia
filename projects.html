@@ -24,7 +24,9 @@
 
         <!--Bootstrap version-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-        
+        <!-- Assuming you're using Bootstrap for styling, include it -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
       <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/mystyles.css" rel="stylesheet" />
@@ -64,6 +66,39 @@
                                 <img class="modal-content" id="modalImage">
                             </div>
 
+
+                            <!-- Modal for image zoom -->
+                            <div id="imageModal" class="modal">
+                                <button class="close-btn" onclick="closeModal()">&times</button><!--原：<button class="close-btn" onclick="closeModal()">&times;</button>-->
+                                <img id="modalImage" src="" alt="Enlarged Image">
+                            </div>
+
+                            <script>
+                                // Function to open the modal and set the image source
+                                function openModal(imageSrc) {
+                                    const modal = document.getElementById('imageModal');
+                                    const modalImg = document.getElementById('modalImage');
+                                    modal.style.display = 'flex'; // Show the modal
+                                    modalImg.src = imageSrc; // Set the image source
+                                }
+
+                                // Function to close the modal
+                                function closeModal() {
+                                    const modal = document.getElementById('imageModal');
+                                    modal.style.display = 'none'; // Hide the modal
+                                }
+
+                                // Optional: Close modal when clicking outside the image
+                                document.getElementById('imageModal').addEventListener('click', function(event) {
+                                    if (event.target === this) {
+                                        closeModal();
+                                    }
+                                });
+                            </script>
+
+                            <!-- Include Bootstrap JS for card styling (optional if already included elsewhere) -->
+                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
                           <!-- Project Card Illustrator 1-->
                             <div class="card pc overflow-hidden shadow rounded-4 border-0 mb-5">
                                 <div class="card-body p-0">
@@ -73,7 +108,7 @@
                                             <p class="text-muted">Apr, 2023</p>
                                             <p>第一次設計自己的名片，設計主要以英文拼音為主。</p>
                                         </div>
-                                        <img class="img-fluid" src="https://cdn.glitch.global/6fa26146-f16e-4190-8d37-182452543057/%E5%90%8D%E7%89%87%E6%AD%A3%E9%9D%A2%20%E9%AB%98%E8%A7%A3%E6%9E%90.jpeg?v=1732357289738" alt="..." />
+                                        <img class="img-fluid" src="https://cdn.glitch.global/6fa26146-f16e-4190-8d37-182452543057/%E5%90%8D%E7%89%87%E6%AD%A3%E9%9D%A2%20%E9%AB%98%E8%A7%A3%E6%9E%90.jpeg?v=1732357289738" alt="..."  onclick="openModal(this.src)"/>
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +126,7 @@
                                             <p class="text-justify">這是一張以「Retro復古」為主題的海報，剛開始接觸這方面的海報製作，在美感和設計上都有很多不足之處。</p>
                                             <p class="text-justify">可以發現，這張海報整體看起來凌亂，且物件過多。</p>
                                         </div>
-                                        <img class="img-fluid image-class" src="https://cdn.glitch.global/6fa26146-f16e-4190-8d37-182452543057/Retro Poster.png?v=1727081962722" alt="..." />
+                                        <img class="img-fluid image-class" src="https://cdn.glitch.global/6fa26146-f16e-4190-8d37-182452543057/Retro Poster.png?v=1727081962722" alt="..."  onclick="openModal(this.src)" />
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +141,7 @@
                                             <p class="text-muted">Jun, 2023</p>
                                             <p class="text-justify">隨後，我更換了一種完全不一樣的風格，並添加了設計，營造一種海報被懸吊著的感覺，整體畫面看起來較舒適、整潔，內容也清晰了許多。</p>
                                         </div>
-                                        <img class="img-fluid image-class" src="https://cdn.glitch.global/6fa26146-f16e-4190-8d37-182452543057/Shawn Mendes poster.png?v=1727081961524" alt="..." />
+                                        <img class="img-fluid image-class" src="https://cdn.glitch.global/6fa26146-f16e-4190-8d37-182452543057/Shawn Mendes poster.png?v=1727081961524" alt="..."  onclick="openModal(this.src)" />
                                     </div>
                                 </div>
                             </div>
@@ -122,10 +157,11 @@
                                             <p class="text-justify">圖中的票券邊緣的凹陷半圓形，以及旁邊的飲料，皆是以矩形工具與線條工具繪製而成。</p>
                                             <p class="text-justify">白色的點則是以鋼筆工具創造出不規則的圖案。</p>
                                         </div>
-                                        <img class="img-fluid image-class" src="./assets/drink.jpg" alt="飲料折扣券。" />
+                                        <img class="img-fluid image-class" src="./assets/drink.jpg" alt="飲料折扣券。"  onclick="openModal(this.src)" />
                                     </div>
                                 </div>
                                 </div>
+                                
 
                             <!-- Project Card Photoshop 1-2-->
                             <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
@@ -138,7 +174,7 @@
                                             <p class="text-justify">結合Illustrator的操作，將文字轉變為圖形，壓扁後回到ps給予效果，使得文字看起來在扭動。</p>
                                             <p class="text-justify">底部光影漸層效果的邊界可以處理的更好。</p>
                                         </div>
-                                        <img class="img-fluid image-class" src="./assets/rich.jpg" alt="How to be a Richman POSTER" />
+                                        <img class="img-fluid image-class" src="./assets/rich.jpg" alt="How to be a Richman POSTER"  onclick="openModal(this.src)" />
                                     </div>
                                 </div>
                               </div>  
@@ -153,7 +189,7 @@
                                             <p class="text-muted">Mar, 2025</p>
                                             <p class="text-justify">更熟悉遮色片的操作，將文字覆蓋在人物身上，添加濾鏡與陰影，並以風景填滿物件。</p>
                                         </div>
-                                        <img class="img-fluid image-class" src="./assets/man.jpg" alt="移置效果building" />
+                                        <img class="img-fluid image-class" src="./assets/man.jpg" alt="移置效果building"  onclick="openModal(this.src)" />
                                     </div>
                                 </div>
                               </div>  
@@ -169,7 +205,7 @@
                                             <p class="text-justify">嘗試使用ps的「移置(Display)」的效果，將文字放在牆上，並使其看起來像原本的樣子。</p>
                                             <p class="text-justify">文字的顏色如果再淡一點，也許會更自然。</p>
                                         </div>
-                                        <img class="img-fluid image-class" src="./assets/building.jpg" alt="移置效果building" />
+                                        <img class="img-fluid image-class" src="./assets/building.jpg" alt="移置效果building"  onclick="openModal(this.src)" />
                                     </div>
                                 </div>
                               </div>  
@@ -186,7 +222,7 @@
                                             <p class="text-justify">將適合的pattern在紙袋上進行移置，看起來就像紙袋本身的樣式。</p>
                                             <p class="text-justify">未來可以更注意效果的邊緣是否溢出我們選擇的物件邊界。</p>
                                         </div>
-                                        <img class="img-fluid image-class" src="./assets/Bag.jpg" alt="移置效果bag" />
+                                        <img class="img-fluid image-class" src="./assets/Bag.jpg" alt="移置效果bag"  onclick="openModal(this.src)" />
                                     </div>
                                 </div>
                               </div> 
@@ -202,7 +238,7 @@
                                             <p class="text-justify">透過網格增加海報整體的設計感及文字的擺放位置。</p>
                                             <p class="text-justify">從文字的大小、間距、行距、海報的背景、文字的背景以及字體的選用開始訓練對美感的敏銳度。</p>
                                         </div>
-                                        <img class="img-fluid image-class" src="./assets/Word.jpg" alt="文字設計" />
+                                        <img class="img-fluid image-class" src="./assets/Word.jpg" alt="文字設計"   onclick="openModal(this.src)"/>
                                     </div>
                                 </div>
                               </div> 
@@ -218,7 +254,7 @@
                                             <p class="text-justify">選擇韓國女團BLACKPINK作為主角，以BLACKPINK Summer 2025 World Tour: LONDON的宣傳海報作為參照物來設計。</p>
                                             <p class="text-justify">文字的顏色如果再淡一點，也許會更自然。</p>
                                         </div>
-                                        <img class="img-fluid image-class" src="./assets/BLACKPINK.jpg" alt="BLACKPINK海報" />
+                                        <img class="img-fluid image-class" src="./assets/BLACKPINK.jpg" alt="BLACKPINK海報"   onclick="openModal(this.src)"/>
                                     </div>
                                 </div>
                               </div> 
@@ -234,7 +270,7 @@
                                             <p class="text-justify">調整字的顏色分佈，並融入自己的美感與設計，刻意營造海報在水中，模糊不清，但若隱若現的效果。</p>
                                             <p class="text-justify">但也許是設計過度突兀，導致有點模糊焦點。</p>
                                         </div>
-                                        <img class="img-fluid image-class" src="./assets/BLACKPINK2.jpg" alt="BLACKPINK複雜設計簡報" />
+                                        <img class="img-fluid image-class" src="./assets/BLACKPINK2.jpg" alt="BLACKPINK複雜設計簡報"   onclick="openModal(this.src)"/>
                                     </div>
                                 </div>
                               </div>
@@ -250,7 +286,7 @@
                                             <p class="text-justify">調整字的顏色分佈，並融入自己的美感與設計，刻意營造海報在水中，模糊不清，但若隱若現的效果。</p>
                                             <p class="text-justify">但也許是設計過度突兀，導致有點模糊焦點。</p>
                                         </div>
-                                        <img class="img-fluid image-class" src="./assets/namecard 1-1.jpg" alt="重疊效果名片設計" />
+                                        <img class="img-fluid image-class" src="./assets/namecard 1-1.jpg" alt="重疊效果名片設計"   onclick="openModal(this.src)"/>
                                     </div>
                                 </div>
                               </div>
@@ -266,7 +302,7 @@
                                             <p class="text-justify">調整字的顏色分佈，並融入自己的美感與設計，刻意營造海報在水中，模糊不清，但若隱若現的效果。</p>
                                             <p class="text-justify">但也許是設計過度突兀，導致有點模糊焦點。</p>
                                         </div>
-                                        <img class="img-fluid image-class" src="./assets/namecard 1-2.jpg" alt="名片設計背面" />
+                                        <img class="img-fluid image-class" src="./assets/namecard 1-2.jpg" alt="名片設計背面"   onclick="openModal(this.src)"/>
                                         
                                     </div>
                                 </div>
