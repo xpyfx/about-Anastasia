@@ -1297,6 +1297,7 @@ progress {
   .col-lg-8 {
     flex: 0 0 auto;
     width: 66.66666667%;
+    color: #1c1c1c;
   }
   .col-lg-9 {
     flex: 0 0 auto;
@@ -8114,6 +8115,7 @@ textarea.form-control-lg {
 
 .fw-bolder {
   font-weight: bolder;
+  color: #475f7d;
 }
 
 .lh-1 {
@@ -8241,7 +8243,7 @@ textarea.form-control-lg {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #cdd5db !important;
+  color: #4682b4;
 }
 
 .text-black-50 {
