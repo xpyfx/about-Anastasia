@@ -607,6 +607,10 @@
 .greenblue{
   color: #77a6c0;
 }
+.darkpurple{
+  color: #2b124c;
+}
+
 
 /* Font Size Classes from 8px to 200px */
 .f8 { font-size: 0.5rem; }      /* 8px */
