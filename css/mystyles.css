@@ -865,8 +865,21 @@
 
 /*text*/
 
-.bold{
+.bold {
   font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.underline-hover:hover {
+  text-decoration: underline;
+}
+
+.change-color:hover {
+    text-decoration: underline;
+    color: #4897cc;
 }
 
 .text1 {
