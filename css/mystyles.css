@@ -327,15 +327,55 @@
 
 /*個人網頁作品*/
 .featured-projects {
-    padding: 40px 20px;
-    text-align: center;
+    padding: 40px 0; 
+    overflow-x: hidden; /* 防止整個 section 出現不需要的滾動條 */
 }
-.project-grid {
+/*--.project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+}--*/
+.project-carousel {
+    /* 啟用 Flexbox 讓所有卡片並排 */
+    display: flex; 
+    
+    /* 【關鍵】阻止卡片換行，強制卡片並排在同一行 */
+    flex-wrap: nowrap; 
+    
+    /* 【關鍵】啟用水平滾動條 */
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    
+    /* 設置卡片間距 */
+    gap: 1.5rem; 
+    
+    /* 確保容器可以延伸到視窗邊緣並滾動 */
+    width: 100%; 
+    margin: 0; 
+    
+    /* 增加左右內邊距，讓卡片不要貼到視窗邊緣 */
+    padding: 0 2rem 20px 2rem; 
+    
+    /* 隱藏滾動條 (可選) */
+    scrollbar-width: none;
+}
+
+/* 針對 WebKit 瀏覽器 (Chrome, Safari) 隱藏滾動條 */
+.project-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+
+.project-carousel::-webkit-scrollbar {
+    display: none;
+}
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+    height: 150px; /* 您可以調整這個高度 */
+    object-fit: cover;
 }
 .project-card {
     background: #fff;
@@ -344,11 +384,19 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
     transition: transform 0.3s ease;
+    
+    /* 【關鍵】固定卡片寬度，防止 Flexbox 壓縮 */
+    flex: 0 0 320px; /* 設定固定的卡片寬度 */
+    max-width: 320px; 
+    
+    /* 確保 mb-5 (margin-bottom) 正常工作 */
+    margin-bottom: 3rem !important;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
 }
+/* 其他 .project-card 內部的樣式保持不變 */
 
 .project-card img {
     width: 100%;
