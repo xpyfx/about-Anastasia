@@ -445,6 +445,19 @@
         .project-card a:hover {
             background: #5B6A9A;
         }
+
+.project-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* 視窗太小時自動換行 */
+}
+
+.project-grid .project-card {
+    flex: 1 1 250px; /* 每張卡片最小250px，會自動伸縮 */
+}
+
+
 .first-bg{
   background-image: url("./assets/first web.png");
 }
