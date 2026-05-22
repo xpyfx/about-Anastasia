@@ -1042,4 +1042,42 @@
   cursor: pointer;
 }
 
+/* 手機版修正：防止 profile 圖片遮住按鈕 */
+@media (max-width: 1399px) {
+    .profile {
+        overflow: visible;
+    }
 
+    .profile .profile-img {
+        position: relative;
+        height: auto;
+        max-height: 70vw;
+        width: 100%;
+        left: auto;
+        transform: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    header .col-xxl-5 {
+        position: relative;
+        z-index: 10;
+    }
+
+    header .col-xxl-7 {
+        order: -1;
+    }
+}
+
+/* 修正「我的網頁類作品」標題不要貼近邊界 */
+.featured-projects {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .featured-projects {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
