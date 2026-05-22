@@ -193,7 +193,7 @@
   .font-cinzel{
     font-family: "Cinzel", serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: <400>;
     font-style: normal;
   }
   .font-dot{
@@ -873,7 +873,7 @@
 .generalfont-<uniquifier> {
   font-family: "Noto Serif JP", serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: <400>;
   font-style: normal!important;
 }
 
@@ -892,7 +892,7 @@
 .songtifont {
   font-family: "Noto Serif TC", serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: <400>;
   font-style: normal;
 }
 .sailing-C {
@@ -903,13 +903,13 @@
 .paperfont {
   font-family: "Foldit", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: <400>;
   font-style: normal!important;
 }
 .disney-C {
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: <400>;
   font-style: normal!important;
 }
 .boldfont {
@@ -1042,21 +1042,38 @@
   cursor: pointer;
 }
 
+/* 手機版本 */
+
+/* 圖片 */
+/* 讓特定區塊內的圖片自動適應手機螢幕 */
+.your-project-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* 確保圖片比例正常不變形 */
+}
+
+
 /* 手機版修正：防止 profile 圖片遮住按鈕 */
 @media (max-width: 1399px) {
     .profile {
-        overflow: visible;
+        overflow: visible !important;
+        position: relative !important;
+        height: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
     .profile .profile-img {
-        position: relative;
-        height: auto;
-        max-height: 70vw;
-        width: 100%;
-        left: auto;
-        transform: none;
-        display: block;
-        margin: 0 auto;
+        position: relative !important;
+        height: auto !important;
+        max-height: 80vw !important;
+        width: auto !important;
+        max-width: 80% !important;
+        left: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        display: block !important;
+        margin: 0 auto !important;
     }
 
     header .col-xxl-5 {
@@ -1080,4 +1097,11 @@
         padding-left: 3rem;
         padding-right: 3rem;
     }
+}
+
+/* 讓所有 section 內的圖片在手機上都不會超出螢幕，並且保持比例 */
+section img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
